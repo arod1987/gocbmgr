@@ -698,13 +698,14 @@ type RemoteClusters []RemoteCluster
 
 // RemoteCluster describes an XDCR remote cluster.
 type RemoteCluster struct {
-	Name       string `json:"name" url:"name"`
-	Hostname   string `json:"hostname"  url:"hostname"`
-	Username   string `json:"username"  url:"username"`
-	Password   string `json:"password"  url:"password"`
-	UUID       string `json:"uuid"  url:"uuid"`
-	Deleted    bool   `json:"deleted"`
-	SecureType string `json:"secureType" url:"secureType,omitempty"`
+	Name        string `json:"name" url:"name"`
+	Hostname    string `json:"hostname"  url:"hostname"`
+	Username    string `json:"username"  url:"username"`
+	Password    string `json:"password"  url:"password"`
+	UUID        string `json:"uuid"  url:"uuid"`
+	Deleted     bool   `json:"deleted"`
+	NetworkType string `json:"network_type" url:"network_type,omitempty"`
+	SecureType  string `json:"secureType" url:"secureType,omitempty"`
 
 	// These are here for convenience and should only be populated
 	// after comparison as they are not supplied by the API.
